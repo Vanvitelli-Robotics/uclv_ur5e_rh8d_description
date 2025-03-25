@@ -1,0 +1,45 @@
+# These limits are used by MoveIt and augment/override the definitions in ur_description.
+#
+# While the robot does not inherently have any limits on joint accelerations (only on torques),
+# MoveIt needs them for time parametrization. They were chosen conservatively to work in most use
+# cases. For specific applications, higher values might lead to better execution performance.
+
+joint_limits:
+  Thumb_axis--palm:
+    has_velocity_limits: true
+    max_velocity: 1.0
+    has_acceleration_limits: false
+    max_acceleration: 0
+  forearm:1--base:1:
+    has_velocity_limits: true
+    max_velocity: 1.0
+    has_acceleration_limits: false
+    max_acceleration: 0
+  palmL:1--palm_axis:1:
+    has_velocity_limits: true
+    max_velocity: 1.0
+    has_acceleration_limits: false
+    max_acceleration: 0
+  palm_axis:1--forearm:1:
+    has_velocity_limits: true
+    max_velocity: 1.0
+    has_acceleration_limits: false
+    max_acceleration: 0
+  shoulder_pan_joint:
+    has_acceleration_limits: true
+    max_acceleration: 5.0
+  shoulder_lift_joint:
+    has_acceleration_limits: true
+    max_acceleration: 5.0
+  elbow_joint:
+    has_acceleration_limits: true
+    max_acceleration: 5.0
+  wrist_1_joint:
+    has_acceleration_limits: true
+    max_acceleration: 5.0
+  wrist_2_joint:
+    has_acceleration_limits: true
+    max_acceleration: 5.0
+  wrist_3_joint:
+    has_acceleration_limits: true
+    max_acceleration: 5.0
